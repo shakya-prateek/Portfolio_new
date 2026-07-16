@@ -1014,7 +1014,7 @@ ${this.wrapWithColor("╰──────────────────�
         image: "image/avatar-prateek-800.jpg",
         technologies: ["FastAPI", "OCR", "sentence-transformers", "Docker"],
         demo: "https://ai-pdf-analyzer-jvda-qwjdd9sjy-prateek-s-projects-931e9df6.vercel.app/",
-        repo: "https://ai-pdf-analyzer-jvda-qwjdd9sjy-prateek-s-projects-931e9df6.vercel.app/",
+        repo: "https://github.com/shakya-prateek/Ai-Pdf-analyzer",
       },
       {
         title: "EventSphere",
