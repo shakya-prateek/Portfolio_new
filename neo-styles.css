@@ -1070,12 +1070,12 @@ body[data-theme="dark"] .job-desc i {
   position: relative;
   z-index: 2;
   transform-origin: right top;
-  transform: rotate(0deg);
+  transform: rotate(-2deg);
   transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 .hero-photo.tilted {
-  transform: rotate(-3deg);
+  transform: rotate(-4deg);
 }
 
 .tape-sticker {
