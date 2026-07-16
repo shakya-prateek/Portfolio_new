@@ -1011,7 +1011,7 @@ ${this.wrapWithColor("╰──────────────────�
       {
         title: "AskMyPDF AI",
         description: "Document intelligence & Agentic RAG system with text/OCR scanning and citation grounded Q&A.",
-        image: "image/avatar-prateek.png",
+        image: "image/avatar-prateek-800.jpg",
         technologies: ["FastAPI", "OCR", "sentence-transformers", "Docker"],
         demo: "#",
         repo: "#",
@@ -1019,7 +1019,7 @@ ${this.wrapWithColor("╰──────────────────�
       {
         title: "EventSphere",
         description: "Production event management platform with ticket booking, OTP verification, and Razorpay.",
-        image: "image/avatar-prateek.png",
+        image: "image/avatar-prateek-800.jpg",
         technologies: ["Next.js", "PostgreSQL", "Supabase", "Razorpay"],
         demo: "https://project-event-sphere.vercel.app",
         repo: "https://github.com/shakya-prateek/Event_sphere.git",
@@ -1027,7 +1027,7 @@ ${this.wrapWithColor("╰──────────────────�
       {
         title: "Sync Chat",
         description: "Real-time messaging platform supporting private/group chat and user presence indicators.",
-        image: "image/avatar-prateek.png",
+        image: "image/avatar-prateek-800.jpg",
         technologies: ["React.js", "Socket.IO", "Express.js", "MongoDB"],
         demo: "https://sync-steel.vercel.app/",
         repo: "https://github.com/Prateek-yo/Sync.git",
@@ -1035,7 +1035,7 @@ ${this.wrapWithColor("╰──────────────────�
       {
         title: "ChurnAgent",
         description: "AI Churn Predictor & Agentic RAG decision-support system for 440k+ customer records.",
-        image: "image/avatar-prateek.png",
+        image: "image/avatar-prateek-800.jpg",
         technologies: ["LangGraph", "ChromaDB", "scikit-learn", "Streamlit"],
         demo: "https://churnagent-kicvwmujttx6tpfcovjz53.streamlit.app",
         repo: "https://github.com/Nitin-0017/GenAI_Capstone_Sec-D_Churn_Agent.git",
@@ -1043,7 +1043,7 @@ ${this.wrapWithColor("╰──────────────────�
       {
         title: "Hotel Revenue",
         description: "Predictive analytics of 119k hotel reservations to optimize pricing & cancellation rules.",
-        image: "image/avatar-prateek.png",
+        image: "image/avatar-prateek-800.jpg",
         technologies: ["Python", "Pandas", "scikit-learn", "Matplotlib"],
         demo: "https://github.com/shakya-prateek/Hotel_Booking_analysis.git",
         repo: "https://github.com/shakya-prateek/Hotel_Booking_analysis.git",
@@ -1051,7 +1051,7 @@ ${this.wrapWithColor("╰──────────────────�
       {
         title: "FlightOps",
         description: "ETL pipeline & Tableau dashboard analyzing 100k flight records for airport bottleneck patterns.",
-        image: "image/avatar-prateek.png",
+        image: "image/avatar-prateek-800.jpg",
         technologies: ["Python", "Tableau", "ETL", "Pandas"],
         demo: "https://github.com/shakya-prateek/Flight_dashboard.git",
         repo: "https://github.com/shakya-prateek/Flight_dashboard.git",

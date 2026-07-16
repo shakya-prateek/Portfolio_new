@@ -51,6 +51,7 @@
 
     <!-- Preload critical resources -->
     <link rel="preload" href="neo-styles.css" as="style">
+    <link rel="preload" href="image/avatar-prateek-800.jpg" as="image">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Space+Mono:wght@400;700&family=Caveat:wght@400;700&display=swap" as="style">
 
     <!-- Stylesheets -->
@@ -58,11 +59,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Space+Mono:wght@400;700&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-
-    <!-- External JavaScript -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
     <!-- Structured Data / JSON-LD -->
     <script type="application/ld+json">
     {
@@ -233,7 +229,7 @@
             <div class="hero-right">
                 <div class="hero-image-wrapper">
                     <div class="tape-sticker"></div>
-                    <img src="image/avatar-prateek.png" alt="Prateek Shakya" class="hero-photo" width="400" height="400" fetchpriority="high">
+                    <img src="image/avatar-prateek-800.jpg" alt="Prateek Shakya" class="hero-photo" width="400" height="400" fetchpriority="high">
                     <div class="deco-code">
                         <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect x="6" y="6" width="88" height="88" rx="8" fill="#66d9ef" stroke="#000" stroke-width="4"/>
@@ -872,11 +868,11 @@
         window.scrollTo(0, 0);
 
         // Loading Screen
-        window.addEventListener('load', () => {
+        document.addEventListener('DOMContentLoaded', () => {
             const loader = document.querySelector('.loader-overlay');
             setTimeout(() => {
                 loader.classList.add('hidden');
-            }, 1200); // Hide after 1.2 seconds
+            }, 250);
         });
 
         // Hero Photo Tilt on Scroll
@@ -1314,6 +1310,28 @@
         setTimeout(matrixTypingEffect, 500);
 
         // Journey Map with Leaflet
+        function loadLeafletAssets(callback) {
+            if (window.L) {
+                callback();
+                return;
+            }
+
+            const leafletCss = document.createElement('link');
+            leafletCss.rel = 'stylesheet';
+            leafletCss.href = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
+            document.head.appendChild(leafletCss);
+
+            const leafletScript = document.createElement('script');
+            leafletScript.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
+            leafletScript.onload = callback;
+            document.body.appendChild(leafletScript);
+        }
+
+        function initJourneyMap() {
+        const mapEl = document.getElementById('journey-map');
+        if (!mapEl || mapEl.dataset.ready === 'true' || !window.L) return;
+        mapEl.dataset.ready = 'true';
+
         const initialView = { center: [27.0, 78.5], zoom: 6 };
 
         const map = L.map('journey-map', {
@@ -1463,6 +1481,11 @@
                     }, 500);
                 }
             });
+        });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => loadLeafletAssets(initJourneyMap), 900);
         });
 
         // Progress Bar Functionality
