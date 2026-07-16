@@ -1013,8 +1013,8 @@ ${this.wrapWithColor("╰──────────────────�
         description: "Document intelligence & Agentic RAG system with text/OCR scanning and citation grounded Q&A.",
         image: "image/avatar-prateek-800.jpg",
         technologies: ["FastAPI", "OCR", "sentence-transformers", "Docker"],
-        demo: "#",
-        repo: "#",
+        demo: "https://ai-pdf-analyzer-jvda-qwjdd9sjy-prateek-s-projects-931e9df6.vercel.app/",
+        repo: "https://ai-pdf-analyzer-jvda-qwjdd9sjy-prateek-s-projects-931e9df6.vercel.app/",
       },
       {
         title: "EventSphere",
